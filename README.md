@@ -48,7 +48,7 @@ I find the '**run**' syntax does not work for me, so I this method
 	  [ "$ANDROID_HOME" -eq "~/android-sdk-linux" ]
 	}
 
-![bats-checks.png](https://www.dropbox.com/s/t3keoh0phfop25v/bats-checks.png?dl=0)
+![https://www.dropbox.com/s/t3keoh0phfop25v/bats-checks.png?dl=0](https://www.dropbox.com/s/t3keoh0phfop25v/bats-checks.png?dl=0)
 
 ----
 ### Various Methods for checking files
