@@ -1,0 +1,1 @@
+# notes-bats-style-checks
