@@ -48,7 +48,7 @@ I find the '**run**' syntax does not work for me, so I this method
 	  [ "$ANDROID_HOME" -eq "~/android-sdk-linux" ]
 	}
 
-![pic](https://www.dropbox.com/s/t3keoh0phfop25v/bats-checks.png?raw=1)
+![bats-checks example](https://www.dropbox.com/s/t3keoh0phfop25v/bats-checks.png?raw=1)
 
 ----
 ### Various Methods for checking files
@@ -96,5 +96,17 @@ I find the '**run**' syntax does not work for me, so I this method
 	  [ "$result" != "$USER" ]
 	}
 	
-and even more developed loop
+and an even more developed loop
+
+	@test "-- user eq $USER -------------------" {}
+	_user () {
+	  local -r var="$1"
+	  result=$(stat -c "%U" "${var}" | cut -d' ' -f1)
+	  [ "$result" == "$USER" ]
+	}
+	
+	@test "FILE bower-github.json" { _user /home/vagrant/.config/configstore/bower-github.json ; }
+	@test "FILE insight-cordova.json" { _user /home/vagrant/.config/configstore/insight-cordova.json ; }
+	@test "FILE update-notifier-bower.json" { _user /home/vagrant/.config/configstore/update-notifier-bower.json ;  }
+	@test "FILE update-notifier-cordova.json" { _user /home/vagrant/.config/configstore/update-notifier-cordova.json ;  }
 
