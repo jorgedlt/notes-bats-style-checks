@@ -47,9 +47,8 @@ I find the '**run**' syntax does not work for me, so I this method
 	@test "Test for $ANDROID_HOME values set" {
 	  [ "$ANDROID_HOME" -eq "~/android-sdk-linux" ]
 	}
-![GitHub Logo](/images/logo.png)
 
-![pic](https://www.dropbox.com/s/t3keoh0phfop25v/bats-checks.png)
+![pic](https://www.dropbox.com/s/t3keoh0phfop25v/bats-checks.png?raw=1)
 
 ----
 ### Various Methods for checking files
